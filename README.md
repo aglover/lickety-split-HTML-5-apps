@@ -10,8 +10,6 @@ In this hands-on workshop, I'll show you how to build a jQuery Mobile app using 
 
 This workshop is organized into 3 labs. We don't have a lot of time, so I strongly suggest you pair with someone. People with OSX, please volunteer to be pairing partners as it'll reduce friction because I'm also on OSX. That is, if you have Windows or Linux and someone near you is on a MacBook, then you should probably ask to pair with that person as my directions are tailored to OSX. 
 
-Keep in mind, at least one person will need access to email as creating an account in Heroku uses a two phased authorization for account creation. That is, you'll need to click on a link in an email Heroku sends to you.
-
 ### Lab #1
 
 
@@ -21,14 +19,31 @@ Keep in mind, at least one person will need access to email as creating an accou
 ### Lab #3
 
 
+### Lab #4
+
+
+### Lab #5
+
+
+### Lab #6
+
+
 ## Helpful Resources
   
-  * [Heroku.com](http://www.heroku.com/)
-  * [Heroku development center](https://devcenter.heroku.com/)
-  * [Java development 2.0: Git-commit your Java apps with Heroku's PaaS](http://www.ibm.com/developerworks/library/j-javadev2-21/)
-  * [The Disco Blog Heroku entries](http://thediscoblog.com/blog/categories/heroku/)
-  * [@heroku](https://twitter.com/heroku)
-  * [Heroku Toolbelt](https://toolbelt.heroku.com/)
-  * Git:
-    * [Official Git tutorial](http://git-scm.com/docs/gittutorial)
-    * [vogella.com Git Tutorial](http://vogella.com/articles/Git/)
+  * [jQuery Mobile](http://jquerymobile.com/)
+    * [jQuery Mobile Tutorial](http://the-jquerymobile-tutorial.org/index.php)
+  * [Node.js](http://nodejs.org/)
+    * [Node.js for Java developers](http://www.ibm.com/developerworks/library/j-nodejs/)
+    * [Getting started with Node.js](http://www.ibm.com/developerworks/offers/lp/demos/summary/j-jnodejs.html) video
+    * [Node.js beyond the basics](http://www.ibm.com/developerworks/training/kp/j-kp-node/index.html?cmp=dw&cpb=dwjav&ct=dwnew&cr=dwnen&ccy=zz&csr=062912)
+  * [CoffeeScript](http://coffeescript.org/)
+    * [Rocking Out With CoffeeScript](http://net.tutsplus.com/tutorials/javascript-ajax/rocking-out-with-coffeescript/)
+    * [Writing Better JavaScript with CoffeeScript: The Basics](http://sixrevisions.com/javascript/coffeescript-basics/)
+    * [Functional JavaScript with CoffeeScript and Node](http://www.ibm.com/developerworks/library/j-coffeescript/)
+  * [The Disco Blog](http://thediscoblog.com/)
+    * [Javascript](http://thediscoblog.com/blog/categories/javascript/)
+    * [Node](http://thediscoblog.com/blog/categories/node/)
+    * [Mobile](http://thediscoblog.com/blog/categories/mobile/)
+    * [HTML5](http://thediscoblog.com/blog/categories/html5/)
+    * [CoffeeScript](http://thediscoblog.com/blog/categories/coffeescript/)
+    * [jQuery Mobile](http://thediscoblog.com/blog/categories/jquery-mobile/)
