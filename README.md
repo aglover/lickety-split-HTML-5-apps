@@ -8,7 +8,7 @@ In this hands-on workshop, I'll show you how to build a jQuery Mobile app using 
 
 ## Let's get started! 
 
-This workshop is organized into 3 labs. We don't have a lot of time, so I strongly suggest you pair with someone. People with OSX, please volunteer to be pairing partners as it'll reduce friction because I'm also on OSX. That is, if you have Windows or Linux and someone near you is on a MacBook, then you should probably ask to pair with that person as my directions are tailored to OSX. 
+This workshop is organized into 6, 15 minute labs (with a quick break between #3 & #4). We don't have a lot of time, so I strongly suggest you pair with someone. People with OSX, please volunteer to be pairing partners as it'll reduce friction because I'm also on OSX. That is, if you have Windows or Linux and someone near you is on a MacBook, then you should probably ask to pair with that person as my directions are tailored to OSX. 
 
 ### Clone or download this repository
 
