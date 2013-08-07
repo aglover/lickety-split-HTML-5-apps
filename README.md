@@ -86,8 +86,22 @@ How do you navigate between pages in this app? See that __Next__ button on the t
 
 #### Lab #2
 
+In Lab #2, you will enhance the UX and the UI of the jQuery Mobile App from Lab #1. Mainly, you'll remove those non-snazzy navigation buttons and replae them with gestures; then, you'll refactor the footer of this app to use two custom icons (that is, you'll remove one button entirely and leave the app with only two).
+
+Go ahead and open up the `index.html` file like you did in lab #1. 
+
 ![lab 2 UI](/docs/imgs/lab_2_web.png)
 
+
+Looking nice, eh? 
+
+Try navigating back and forth in this app using the buttons on the top right and left. 
+
+While navigation via buttons works and it's the traditional way of doing things on the desktop, mobile devices present new opportunities for engaging UX. That is, does a user really need to tap a button or can they use a simple gesture like a swipe? 
+
+Of course, the answer is "Yes! You can use gestures!" 
+
+jQuery Mobile, being a mobile first framework, supports the usage of gestures -- all you have to do is plug 'em in. Open up the `index.html` file with your favorite editor and remove the old, pedestrian button logic and replace it with this logic:
 
 ```
 $(document).on("pageinit", function(event) {
@@ -113,6 +127,30 @@ $(document).on("pageinit", function(event) {
 });
 ```
 
+Don't just blindly do this, by the way. Study the code -- what does it do? Also be careful where you add this code! It _must_ come after the inclusion of jQuery but before the inclusion of jQuery Mobile!
+
+Once you've added this logic, how can you test it? 
+
+If you have Chrome, open up the JavaScript Console and then click the button right gear icon. Find the option dubbed __Emulate Touch Events__ and check it. 
+
+![emulate touch](/docs/imgs/touch_events.png)
+
+```
+div[data-role='navbar'] .ui-btn .ui-btn-inner { 
+  padding-top: 50px; 
+}
+div[data-role='navbar'] .ui-btn .ui-icon { 
+  width: 40px; 
+  height: 40px; 
+  margin-left: -20px; 
+}
+#csinfo .ui-icon { 
+  background:  url(/img/42-info.png) 50% 50% no-repeat; 
+}
+#quiz .ui-icon { 
+  background:  url(/img/258-checkmark.png) 50% 50% no-repeat; 
+}
+```
 
 #### Lab #3
 
