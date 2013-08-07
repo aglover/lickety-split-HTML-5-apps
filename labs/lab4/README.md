@@ -115,7 +115,7 @@ $> coffee lab4.coffee
 If you got your code correct, you should see...what?
 
 
-___For fun__: Take the following code and put it into a `.coffee` file and run it:
+__For fun__: Take the following code and put it into a `.coffee` file and run it:
 
 
 ```
