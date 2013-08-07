@@ -95,3 +95,21 @@ Once again, you should see a familiar site (pun _intended_) if you open your bro
 Thus, you've effectively replaced lab #3's code with CoffeeScript -- that is, both lab #3 and lab #4 are the same exact application, just one is CoffeeScript driven and the other isn't. 
 
 __Question__: which do you prefer? Pure JavaScript or CoffeeScript?
+
+__Question__: Can you take the following JavaScript and make it valid CoffeeScript?
+
+```
+var capitalize = function(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+};
+
+console.log(capitalize("washington"));
+```
+
+Hint: to test your answer, throw your code into a file -- call it anything you'd like, such as `lab4.coffee` and then type:
+
+```
+$> coffee lab4.coffee
+```
+
+If you got your code correct, you should see...what? 
