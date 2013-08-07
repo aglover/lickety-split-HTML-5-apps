@@ -64,14 +64,19 @@ Now look at the sub-`div`s of this page -- they also contain `data-role`s, and t
 
 __Question__: How would you add another page to this app? Need a sample word? See [Merriam-Webster's Word of the Day](http://www.merriam-webster.com/word-of-the-day/).
 
-__Question__: How would you change the colors of this app? Hint: the valid attribute values for `data-theme` are `a`, `b`, `c`, `d`, and `e`.  
-
-
-
 ##### colors
+
+By default, jQuery Mobile allows you to easily change the color scheme of a web app. You can get rather fancy with jQuery's [ThemeRoller](http://jquerymobile.com/themeroller/index.php) or you can simply change the values of `data-theme` within the various `div`s associated with a page.
+
+__Question__: How would you change the colors of this app? Hint: the valid attribute values for `data-theme` are `a`, `b`, `c`, `d`, and `e`.
 
 ##### themes
 
+Now check out [jQuery Mobile Flat-UI Theme](https://github.com/ququplay/jquery-mobile-flat-ui-theme). 
+
+Looks rather nice, right? Almost like iOS 7 or Windows Phone 8?
+
+__Question__: How would you change the current web app to leverage it?
 
 #### Lab #2
 
