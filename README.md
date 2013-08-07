@@ -208,10 +208,35 @@ You can install Foreman either as a [Ruby Gem](http://rubygems.org/) (so you'll 
 
 ##### Project setup
 
+_Make sure you open up a terminal (if you don't have one open already) in the `lab3` directory as it is the root of Node web app. The commands from here on out assume you're in the root of that directory._
+
+NPM is Node's package manager -- it manages a project's dependencies (direct & transitive). Take a look at the project's `package.json` file. This file defines the libraries this project depends on -- NPM will install them if we run the following command:
+
 ```
 $> npm install
 ```
 
+Now that you've installed all the dependencies of this project, you're ready to run it. 
+
+##### Project setup
+
+To run this app, you'll use foreman. If you look at the `Profile` defined in this project, you'll see that it instructs foreman to use the `node` command to run the file `App.js`:
+
+```
+web: node App.js
+```
+
+Simple right? Give it a try -- run the app like so:
+
+```
+$> foreman start
+```
+
+Finally, open up a browser and go to [localhost:5000](http://localhost:5000).
+
+![Lab 3](/docs/imgs/lab_3.png)
+
+If you see the above web app, then you are now up and running with Node.js! 
 
 #### Lab #4
 
