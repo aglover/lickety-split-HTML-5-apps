@@ -1,78 +1,16 @@
-## Lab #3
+## Lab #4
 
-In Lab #3, you're going to get up and running with Node.js. 
+In this lab, we're going to learn about [CoffeeScript](http://coffeescript.org/), which is
 
-#### Installing Node.js
+>a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart. CoffeeScript is an attempt to expose the good parts of JavaScript in a simple way.
 
-You can install Node.js in [three steps](http://thediscoblog.com/blog/2013/03/12/node-in-3-commands/):
+Thus, CoffeeScript makes JavaScript more concise and easier to program. There's no semi-colons, curly braces, and `var`s. As you'll see, it is rapidly becoming the language of choice for a wide range of Node developers.
 
-Step 1: Download and install nvm.
+#### Proof in the pudding
 
-```
-$> curl https://raw.github.com/creationix/nvm/master/install.sh | sh
-```
+Don't want to take my word for it? Here's a fun tool -- write some JavaScript and have it automatically converted into CoffeeScript with [JS2Coffee](http://js2coffee.org/).
 
-Step 2: Reload your shell.
-
-```
-$> source .bash_profile
-```
-
-Step 2.5: Obtain a list of available node versions to install.
-
-```
-$> nvm ls-remote
-```
-
-Step 3: Install your desired version of node.
-
-```
-$> nvm install v0.10.0
-```
-
-#### Foreman
-
-Next, you'll want to install [Foreman](https://github.com/ddollar/foreman), which is a process runner (for lack of a better definition). Foreman makes running a series of processes easier by allowing you to define process requirements in one file, known as a `Profile`. 
-
-You can install Foreman either as a [Ruby Gem](http://rubygems.org/) (so you'll need to [install Ruby](http://www.ruby-lang.org/en/)) or if you are on OSX, there is a .dmg installer. 
-
-#### Project setup
-
-_Make sure you open up a terminal (if you don't have one open already) in the `lab3` directory as it is the root of Node web app. The commands from here on out assume you're in the root of that directory._
-
-NPM is Node's package manager -- it manages a project's dependencies (direct & transitive). Take a look at the project's `package.json` file. This file defines the libraries this project depends on -- NPM will install them if we run the following command:
-
-```
-$> npm install
-```
-
-The major dependency of this project is [Express](http://expressjs.com/), which is the de-facto web application framework for Node these days. Almost all higher-level full stack frameworks for Node are built on top of Express, so it pays to understand Express before you start to dive into the more Rails-like (or non-Rails-like!) Node frameworks out there. 
-
-Now that you've installed all the dependencies of this project, you're ready to run it. 
-
-#### Up & Running
-
-To run this app, you'll use foreman. If you look at the `Profile` defined in this project, you'll see that it instructs foreman to use the `node` command to run the file `App.js`:
-
-```
-web: node App.js
-```
-
-Simple right? Give it a try -- run the app like so:
-
-```
-$> foreman start
-```
-
-Finally, open up a browser and go to [localhost:5000](http://localhost:5000).
-
-![Lab 3](../../docs/imgs/lab_3.png)
-
-If you see the above web app, then you are now up and running with Node.js! 
-
-#### What just happened
-
-Take some time now and study the file `App.js` -- this _is the app_. Not a lot of code, no?
+For example, the following JavaScript, while not terribly complex by any means can easily be converted: 
 
 ```
 var app, express, port;
@@ -85,7 +23,6 @@ app.use('/', express["static"](__dirname + '/public'));
 app.use('/components', express["static"](__dirname + '/public/components'));
 app.use('/img', express["static"](__dirname + '/public/img'));
 app.use('/css', express["static"](__dirname + '/public/css'));
-
 app.get('/', function(req, res) {
    res.render('index.html');
 });
@@ -97,6 +34,60 @@ app.listen(port, function() {
 });
 ```
 
-Note how in Node's case, you don't deploy this to some web container (like you would, for example, with a Java web app). The Node app itself is a web server as seen from the line `app.listen`. 
+And becomes a bit easier on the eyes as follows: 
 
-As you can see, the Node platform exudes conciseness. But wait! Do you find yourself asking if things could things get any easier? Yes, someone snickers. "Yes they can! Check out [CoffeeScript](http://coffeescript.org/)!"
+```
+express = require("express")
+app = express(express.logger())
+app.use express.errorHandler(
+  dumpExceptions: true
+  showStack: true
+)
+app.use "/", express["static"](__dirname + "/public")
+app.use "/components", express["static"](__dirname + "/public/components")
+app.use "/img", express["static"](__dirname + "/public/img")
+app.use "/css", express["static"](__dirname + "/public/css")
+app.get "/", (req, res) ->
+  res.render "index.html"
+
+port = process.env.PORT or 3000
+app.listen port, ->
+  console.log "listening on " + port
+```
+
+Note a few things: 
+  * no semi-colons
+  * no curly braces
+  * while space is a delimiter (Python-style)
+  * the use of `or` rather than `||`
+  * no `var`s
+  * Ruby style method invocation -- that is, no `()`
+  * no `function` declarations -- instead, they are replaced with `->`
+
+#### Let's get going w/it already
+
+Let's get started with running a CoffeeScript app. Just like in Lab #3, you'll need to run NPM, but in this case, you'll install the project's dependencies as well as a global one. 
+
+Accordingly, first, from within the `lab4` directory, type:
+
+```
+$> npm install
+```
+
+Then type:
+
+```
+$> sudo npm install -g coffee-script
+```
+
+The above command installs CoffeeScript as a global library -- this is needed for Foreman to run the `coffee` command.
+
+Once you've done those two steps, then type:
+
+```
+$> foreman start
+```
+
+Once again, you should see a familiar site (pun _intended_) if you open your browser:
+
+![familiar, no?](../../docs/imgs/lab_3.png)
