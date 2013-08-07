@@ -89,6 +89,31 @@ How do you navigate between pages in this app? See that __Next__ button on the t
 ![lab 2 UI](/docs/imgs/lab_2_web.png)
 
 
+```
+$(document).on("pageinit", function(event) {
+  $("div.ui-page").on("swipeleft", function() {
+    var nextpage;
+    console.log("swipeleft invoked");
+    nextpage = $(this).next("div[data-role=\"page\"]");
+    if (nextpage.length > 0) {
+      return $.mobile.changePage(nextpage, "slide", false, true);
+    }
+  });
+  return $("div.ui-page").on("swiperight", function() {
+    var prevpage;
+    console.log("swiperight invoked");
+    prevpage = $(this).prev("div[data-role=\"page\"]");
+    if (prevpage.length > 0) {
+      return $.mobile.changePage(prevpage, {
+        transition: "slide",
+        reverse: true
+      }, true, true);
+    }
+  });
+});
+```
+
+
 #### Lab #3
 
 
