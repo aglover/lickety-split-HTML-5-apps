@@ -95,6 +95,32 @@ Note a few things:
   * Ruby style method invocation -- that is, no `()`
   * no `function` declarations -- instead, they are replaced with `->`
 
+
+Let's get started with running a CoffeeScript app. Just like in Lab #3, you'll need to run NPM, but in this case, you'll install the project's dependencies as well as a global one. 
+
+Accordingly, first, from within the `lab4` directory, type:
+
+```
+$> npm install
+```
+
+Then type:
+
+```
+$> sudo npm install -g coffee-script
+```
+
+The above command installs CoffeeScript as a global library -- this is needed for Foreman to run the `coffee` command.
+
+Once you've done those two steps, then type:
+
+```
+$> foreman start
+```
+
+
+
+
 #### Lab #5
 
 
