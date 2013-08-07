@@ -99,4 +99,4 @@ app.listen(port, function() {
 
 Note how in Node's case, you don't deploy this to some web container (like you would, for example, with a Java web app). The Node app itself is a web server as seen from the line `app.listen`. 
 
-As you can see, the Node platform exudes conciseness. 
+As you can see, the Node platform exudes conciseness. But wait! Do you ask yourself if things could things get any easier? Yes, someone shouts. "Yes they can! Check out [CoffeeScript](http://coffeescript.org/)!"
