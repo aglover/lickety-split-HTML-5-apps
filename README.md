@@ -16,7 +16,7 @@ To work on the 6 labs for this workshop, you'll need to either clone ([using Git
 
 ### Pro tip
 
-We're going to be looking at source code. You'll want to use a developer friendly editor like [Sublime Text 2](http://www.sublimetext.com/2) or [TextMate](http://macromates.com/). You are free to use an IDE too -- it's entirely up to you. 
+We're going to be looking at and editing source code. You'll want to use a developer friendly editor like [Sublime Text 2](http://www.sublimetext.com/2) or [TextMate](http://macromates.com/). You are free to use an IDE too -- it's entirely up to you. 
 
 #### Lab #1
 
@@ -57,6 +57,16 @@ In jQuery Mobile, a web page is delineated by a special `div`. In fact, it's def
   </div>
 </div>
 ```
+
+Look closely at the code above and note the various `div` attributes, in addition to `data-role`. `id` is helpful for linking as you'll see later. `data-theme` defines colors in jQuery Mobile.
+
+Now look at the sub-`div`s of this page -- they also contain `data-role`s, and they are fairly self explanatory: `content` is, well, the content of the page and `footer` is...yes, you guessed it correctly: the footer of the page. Can you guess what `header` is? 
+
+__Question__: How would you add another page to this app? 
+
+__Question__: How would you change the colors of this app? Hint: the valid attribute values for `data-theme` are `a`, `b`, `c`, `d`, and `e`.  
+
+
 
 ##### colors
 
