@@ -3,13 +3,7 @@ var app, express, port;
 express = require('express');
 app = express(express.logger());
 
-app.use(express.errorHandler({
-  dumpExceptions: true,
-  showStack: true
-}));
-
-app.set('view options', {layout: false});
-// app.use(express.static(__dirname + '/public'));
+app.use(express.errorHandler({dumpExceptions: true, showStack: true}));
 app.use('/', express["static"](__dirname + '/public'));
 app.use('/components', express["static"](__dirname + '/public/components'));
 app.use('/img', express["static"](__dirname + '/public/img'));

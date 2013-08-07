@@ -216,9 +216,11 @@ NPM is Node's package manager -- it manages a project's dependencies (direct & t
 $> npm install
 ```
 
+The major dependency of this project is [Express](http://expressjs.com/), which is the de-facto web application framework for Node these days. Almost all higher-level full stack frameworks for Node are built on top of Express, so it pays to understand Express before you start to dive into the more Rails-like (or non-Rails-like!) Node frameworks out there. 
+
 Now that you've installed all the dependencies of this project, you're ready to run it. 
 
-##### Project setup
+##### Up & Running
 
 To run this app, you'll use foreman. If you look at the `Profile` defined in this project, you'll see that it instructs foreman to use the `node` command to run the file `App.js`:
 
@@ -237,6 +239,37 @@ Finally, open up a browser and go to [localhost:5000](http://localhost:5000).
 ![Lab 3](/docs/imgs/lab_3.png)
 
 If you see the above web app, then you are now up and running with Node.js! 
+
+##### What just happened
+
+Take some time now and study the file `App.js` -- this _is the app_. Not a lot of code, no?
+
+```
+var app, express, port;
+
+express = require('express');
+app = express(express.logger());
+
+app.use(express.errorHandler({dumpExceptions: true, showStack: true}));
+app.use('/', express["static"](__dirname + '/public'));
+app.use('/components', express["static"](__dirname + '/public/components'));
+app.use('/img', express["static"](__dirname + '/public/img'));
+app.use('/css', express["static"](__dirname + '/public/css'));
+
+app.get('/', function(req, res) {
+   res.render('index.html');
+});
+
+port = process.env.PORT || 3000;
+
+app.listen(port, function() {
+  return console.log("listening on " + port);
+});
+```
+
+Note how in Node's case, you don't deploy this to some web container (like you would, for example, with a Java web app). The Node app itself is a web server as seen from the line `app.listen`. 
+
+As you can see, the Node platform exudes conciseness. 
 
 #### Lab #4
 
