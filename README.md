@@ -28,7 +28,7 @@ Go ahead and resize your browser window to make it more like a device (a phone o
 
 Now take a look at the source code. 
 
-##### `div`s and pages
+##### Pages
 
 In jQuery Mobile, a web page is delineated by a special `div`. In fact, it's defined by a `div` with a special attribute dubbed `data-role` with a value of `page`. For example, the definition for the page you see above is defined as:
 
