@@ -24,6 +24,7 @@ In [Lab #1](/labs/lab1/README.md), you'll learn the basics of jQuery Mobile.
 
 #### Lab #2
 
+In [Lab #2](/labs/lab2/README.md), you'll implement gestures and add custom icons to a jQuery Mobile app.
 
 #### Lab #3
 
