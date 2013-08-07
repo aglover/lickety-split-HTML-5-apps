@@ -50,6 +50,98 @@ Open up your browser and go to [localhost:5000/](http://localhost:5000/) and onc
 
 ![same old same old](/docs/imgs/lab_3.png)
 
+Now try and swipe through the list of words.....wait, you can't swipe....what's going on?!
+
+##### Templates and Databases
+
+Fire up your favorite text editor and begin by examining `App.coffee`. There's a few new lines of code in there that you've not seen before. 
+
+For starters, there's a few more `require` statements. 
+
+__Question__: What does `require './config/Bootstrap'` do? Hint, go into the `config` directory and view the `Bootstrap.coffee` file.  If you can't figure it out yet, don't worry, it'll make some sense shortly.
+
+Back to the `App.coffee` file. You should see this line of code:
+
+```
+whiskers = require 'whiskers'
+```
+
+[Whiskers.js](https://github.com/gsf/whiskers.js/) is a templating engine for Node apps. It's like Ruby's `ERB` or `Haml` or Java's `Jsp`s but in this case, Whiskers is based off of [Mustache](https://github.com/janl/mustache.js). In short, with a template engine, you can create dynamic web pages and you use `{{}}`'s as delimiters. 
+
+For example, if you have a variable `user` that's value was `Andy`, then the following code:
+
+```
+<h4>{{user}}</h4>
+```
+
+Would yield:
+
+```
+<h4>Andy</h4>
+```
+
+When rendered via a Mustache compatible rendering engine like Whiskers. More on this to come...
+
+Now check out this line of code in `App.coffee`:
+
+```
+db = require './config/Datastore'
+```
+
+Go ahead and checkout the `Datastore.coffee` file in the `config` directory. 
+
+
+```
+mongo = require 'mongoskin'
+
+db = mongo.db('mongodb://metrics:metrics@flame.mongohq.com:27036/metrics', {safe:false})
+
+db.bind 'words', {
+  recentlyCreated: (fn) ->
+    this.find({}, {limit:10, sort:[['_id', -1]]}).toArray(fn)
+}
+
+exports.datastore = db
+```
+
+This code does a number of things; suffice it to say, this code talks to a database. In this case, the database is [MongoDB](http://www.mongodb.org/). MongoDB is
+
+>Document-oriented databases like MongoDB are vastly different from relational databases in that they don't store data in tables; instead, they store it in the form of documents. From a developer's perspective, document-oriented (or schemaless) data is simpler and far more flexible to manage than relational data. Rather than storing data into a rigid schema of tables, rows, and columns, joined by relationships, documents are written individually, containing whatever data they require.
+>Among open source, document-oriented databases, MongoDB is often billed as a NoSQL database with RDBMS features. One example of this is MongoDB's support for dynamic queries that don't require predefined MapReduce functions. MongoDB also comes with an interactive shell that makes accessing its datastore refreshingly easy, and its out-of-the-box support for sharding enables high scalability across multiple nodes.
+
+```
+<body>
+  {for word in words}
+    <div data-role="page" id="page_{word.id}" data-theme='c'>
+      <div data-theme="g" data-role="header">
+        <h3>
+            Overheard Word
+        </h3>
+      </div>
+      
+      <div data-role="content"> 
+        <div class="center-wrapper">
+           <h2>{word.spelling} </h2>
+           <p><em>{word.partOfSpeech}</em> - {word.definition}</p>
+           <p>"{word.exampleSentence}"</p>
+         </div>
+      </div>
+
+      <div data-theme="g" data-role="footer" data-id="footer" data-position="fixed">
+        <div data-role='navbar'>
+          <ul>
+            <li><a href='#' data-icon='custom' id='csinfo'>Help</a></li>
+            <li><a href='#' data-icon='custom' id='quiz'>Quiz</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  {/for}
+</body>
+```
+
+
+
 #### Lab #6
 
 
