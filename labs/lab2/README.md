@@ -80,3 +80,7 @@ Then, change the footer to make use of these icons! Hint: you'll need to replace
 ```
 <li><a href='#' data-icon='custom' id='csinfo'>Help</a></li>
 ```
+
+When you're done, the web app should look something like what you see below:
+
+![all done!](../../docs/imgs/lab_3.png)
