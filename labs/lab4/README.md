@@ -91,3 +91,7 @@ $> foreman start
 Once again, you should see a familiar site (pun _intended_) if you open your browser:
 
 ![familiar, no?](../../docs/imgs/lab_3.png)
+
+Thus, you've effectively replaced lab #3's code with CoffeeScript -- that is, both lab #3 and lab #4 are the same exact application, just one is CoffeeScript driven and the other isn't. 
+
+__Question__: which do you prefer? Pure JavaScript or CoffeeScript?
