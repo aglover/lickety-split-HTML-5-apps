@@ -74,6 +74,8 @@ __Question__: How would you change the colors of this app? Hint: the valid attri
 
 Now check out [jQuery Mobile Flat-UI Theme](https://github.com/ququplay/jquery-mobile-flat-ui-theme). 
 
+![Flat UI](/docs/imgs/flat-ui.png)
+
 Looks rather nice, right? Almost like iOS 7 or Windows Phone 8?
 
 __Question__: How would you change the current web app to leverage it?
