@@ -62,7 +62,7 @@ Look closely at the code above and note the various `div` attributes, in additio
 
 Now look at the sub-`div`s of this page -- they also contain `data-role`s, and they are fairly self explanatory: `content` is, well, the content of the page and `footer` is...yes, you guessed it correctly: the footer of the page. Can you guess what `header` is? 
 
-__Question__: How would you add another page to this app? Need a sample word? See [Merriam-Webster](http://www.merriam-webster.com/word-of-the-day/)'s Word of the Day.
+__Question__: How would you add another page to this app? Need a sample word? See [Merriam-Webster's Word of the Day](http://www.merriam-webster.com/word-of-the-day/).
 
 __Question__: How would you change the colors of this app? Hint: the valid attribute values for `data-theme` are `a`, `b`, `c`, `d`, and `e`.  
 
