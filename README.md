@@ -172,7 +172,7 @@ Then, change the footer to make use of these icons! Hint: you'll need to replace
 
 In Lab #3, you're going to get up and running with Node.js. 
 
-#### Installing Node.js
+##### Installing Node.js
 
 You can install Node.js in [three steps](http://thediscoblog.com/blog/2013/03/12/node-in-3-commands/):
 
@@ -200,11 +200,17 @@ Step 3: Install your desired version of node.
 $> nvm install v0.10.0
 ```
 
-#### Foreman
+##### Foreman
 
 Next, you'll want to install [Foreman](https://github.com/ddollar/foreman), which is a process runner (for lack of a better definition). Foreman makes running a series of processes easier by allowing you to define process requirements in one file, known as a `Profile`. 
 
 You can install Foreman either as a [Ruby Gem](http://rubygems.org/) (so you'll need to [install Ruby](http://www.ruby-lang.org/en/)) or if you are on OSX, there is a .dmg installer. 
+
+##### Project setup
+
+```
+$> npm install
+```
 
 
 #### Lab #4

@@ -1,0 +1,103 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title></title>
+    
+  <link rel="stylesheet" type="text/css" href="components/jqm-flatui/generated/jquery.mobile.flatui.min.css" />
+
+  <script src="https://d10ajoocuyu32n.cloudfront.net/jquery-1.9.1.min.js"></script>
+
+  <script>
+    // Bind to "mobileinit" before you load jquery.mobile.js
+    // Set the default transition to slide
+    $(document).on( "mobileinit", function() {
+      $.mobile.defaultPageTransition = "slide";
+    }); 
+  </script>
+
+  <script>
+    $(document).on("pageinit", function(event) {
+      $("div.ui-page").on("swipeleft", function() {
+        var nextpage;
+        console.log("swipeleft invoked");
+        nextpage = $(this).next("div[data-role=\"page\"]");
+        if (nextpage.length > 0) {
+          return $.mobile.changePage(nextpage, "slide", false, true);
+        }
+      });
+      return $("div.ui-page").on("swiperight", function() {
+        var prevpage;
+        console.log("swiperight invoked");
+        prevpage = $(this).prev("div[data-role=\"page\"]");
+        if (prevpage.length > 0) {
+          return $.mobile.changePage(prevpage, {
+            transition: "slide",
+            reverse: true
+          }, true, true);
+        }
+      });
+    });
+  </script>
+  <link rel="stylesheet" type="text/css" href="css/site.css" />
+  <script src="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+  <!-- Extra Codiqa features -->
+  <script src="https://d10ajoocuyu32n.cloudfront.net/codiqa.ext.js"></script>
+  
+</head>
+<body>
+    <!-- page 1 -->
+    <div data-role="page" id="page_1" data-theme='e'>
+      <div data-theme="g" data-role="header">
+        <h3>
+            Overheard Word
+        </h3>
+      </div>
+      
+      <div data-role="content"> 
+        <div class="center-wrapper">
+           <h2>Raucous</h2>
+           <p><em>Noun</em> - Boisterously disorderly</p>
+           <p>"The partying neighbors kept up their raucous laughter half the night."</p>
+         </div>
+      </div>
+
+      <div data-theme="g" data-role="footer" data-id="footer" data-position="fixed">
+        <div data-role='navbar'>
+          <ul>
+           <li><a href='#' data-icon='custom' id='csinfo'>Help</a></li>
+            <li><a href='#' data-icon='custom' id='quiz'>Quiz</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+     <!-- page 2 -->
+    <div data-role="page" id="page_2" data-theme='e' data-add-back-btn='true'>
+      <div data-theme="g" data-role="header">
+        <h3>
+            Overheard Word
+        </h3>
+      </div>
+      
+      <div data-role="content"> 
+        <div class="center-wrapper">
+           <h2>Cadre</h2>
+           <p><em>Noun</em> - A cell of indoctrinated leaders active in promoting the interests of a revolutionary party</p>
+           <p>"Claims that the problem will never be solved within the existing cadre of the state bureaucracy."</p>
+         </div>
+      </div>
+
+      <div data-theme="g" data-role="footer" data-id="footer" data-position="fixed">
+        <div data-role='navbar'>
+          <ul>
+            <li><a href='#' data-icon='custom' id='csinfo'>Help</a></li>
+            <li><a href='#' data-icon='custom' id='quiz'>Quiz</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>    
+</body>
+</html>
