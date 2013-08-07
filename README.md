@@ -118,7 +118,9 @@ Once you've done those two steps, then type:
 $> foreman start
 ```
 
+Once again, you should see a familiar site (pun _intended_) if you open your browser:
 
+![familiar, no?](/docs/imgs/lab_3.png)
 
 
 #### Lab #5
