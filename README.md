@@ -113,6 +113,9 @@ What's more,
 >Among open source, document-oriented databases, MongoDB is often billed as a NoSQL database with RDBMS features. One example of this is MongoDB's support for dynamic queries that don't require predefined MapReduce functions. MongoDB also comes with an interactive shell that makes accessing its datastore refreshingly easy, and its out-of-the-box support for sharding enables high scalability across multiple nodes.
 >> From [Java development 2.0: MongoDB: A NoSQL datastore with (all the right) RDBMS moves](http://www.ibm.com/developerworks/library/j-javadev2-12/) by yours truly
 
+Back to the code in `Datastore.coffee`....`mongoskin` is the library being used to communicate with MongoDB. The `db.bind` method creates a function dubbed `recentlyCreated` that finds the 10 most recently created  documents in the `words` collection (aka table). This function will show up in a few more minutes. 
+
+
 
 ```
 <body>
