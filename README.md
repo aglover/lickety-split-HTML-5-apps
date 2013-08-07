@@ -86,6 +86,8 @@ How do you navigate between pages in this app? See that __Next__ button on the t
 
 #### Lab #2
 
+![lab 2 UI](/docs/imgs/lab_2_web.png)
+
 
 #### Lab #3
 
