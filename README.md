@@ -48,7 +48,7 @@ $> npm install
 
 Open up your browser and go to [localhost:5000/](http://localhost:5000/) and once again, you should see:
 
-![same old same old](/docs/imgs/lab3.png)
+![same old same old](/docs/imgs/lab_3.png)
 
 #### Lab #6
 
