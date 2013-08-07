@@ -80,6 +80,10 @@ Looks rather nice, right? Almost like iOS 7 or Windows Phone 8?
 
 __Question__: How would you change the current web app to leverage it?
 
+##### Parting thoughts
+
+How do you navigate between pages in this app? See that __Next__ button on the top right or the __Back__ button on the top left (after you hit __Next__)? Is that an optimal way to navigate?
+
 #### Lab #2
 
 
