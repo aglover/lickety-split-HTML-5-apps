@@ -58,7 +58,7 @@ In [Lab #6](/labs/lab6/README.md), you'll learn how to configure and use an asse
     * [The Java technology zone technical podcast series: What is CoffeeScript with Ryan McGeary](http://www.ibm.com/developerworks/podcast/ag/gloverseries-mcgeary.mp3)
     * [coffeescript-koans](https://github.com/sleepyfox/coffeescript-koans)
     * [Another coffeescript-koans](https://github.com/liammclennan/coffeescript-koans)
-  * JavaScript
+  * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
     * [Java development 2.0: JavaScript for Java developers](http://www.ibm.com/developerworks/java/library/j-javadev2-18/index.html)
     * [Didacto: JavaScript](http://javascript.didacto.net/)
     * [JavaScript-Koans](https://github.com/liammclennan/JavaScript-Koans)
