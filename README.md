@@ -24,6 +24,45 @@ In Lab #1, you'll find an `index.html` file.  If you double-click it or open it 
 
 ![lab 1 jquery app](/docs/imgs/lab_1_web.png)
 
+Go ahead and resize your browser window to make it more like a device (a phone or tablet, for example). 
+
+Now take a look at the source code. 
+
+##### divs and pages
+
+In jQuery Mobile, a web page is delineated by a special `div`. In fact, it's defined by a `div` with a special attribute dubbed `data-role` with a value of `page`. For example, the definition for the page you see above is defined as:
+
+```
+<div data-role="page" id="page_1" data-theme='e'>
+  <div data-theme="a" data-role="header">
+    <h3>Overheard Word</h3>
+  </div>
+
+  <div data-role="content"> 
+    <div class="center-wrapper">
+      <h2>Raucous</h2>
+      <p><em>Noun</em> - Boisterously disorderly</p>
+      <p>"The partying neighbors kept up their raucous laughter half the night."</p>
+    </div>
+  </div>
+
+  <div data-theme="a" data-role="footer" data-id="footer" data-position="fixed">
+    <div data-role='navbar'>
+      <ul>
+        <li><a href='#' data-icon='home'>Home</a></li>
+        <li><a href='#' data-icon='info'>Help</a></li>
+        <li><a href='#' data-icon='search'>Search</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+```
+
+##### colors
+
+##### themes
+
+
 #### Lab #2
 
 
