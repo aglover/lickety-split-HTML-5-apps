@@ -57,6 +57,7 @@ In [Lab #4](/labs/lab4/README.md), your inner perfectionist is awakened with [Co
     * [coffeescript-koans](https://github.com/sleepyfox/coffeescript-koans)
     * [Another coffeescript-koans](https://github.com/liammclennan/coffeescript-koans)
   * JavaScript
+    * [Java development 2.0: JavaScript for Java developers](http://www.ibm.com/developerworks/java/library/j-javadev2-18/index.html)
     * [Didacto: JavaScript](http://javascript.didacto.net/)
     * [JavaScript-Koans](https://github.com/liammclennan/JavaScript-Koans)
     * [Another javascript-koans](https://github.com/mrdavidlaing/javascript-koans)

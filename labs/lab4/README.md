@@ -112,4 +112,37 @@ Hint: to test your answer, throw your code into a file -- call it anything you'd
 $> coffee lab4.coffee
 ```
 
-If you got your code correct, you should see...what? 
+If you got your code correct, you should see...what?
+
+
+___For fun__: Take the following code and put it into a `.coffee` file and run it:
+
+
+```
+class Message
+	constructor: (@to, @from, @message) ->
+	
+	asJSON:  ->
+		JSON.stringify({to: @to, from: @from, message: @message})
+
+mess = new Message "Andy", "Joe", "Go to the party!"
+console.log mess.asJSON()
+``` 
+
+The code above creates a class -- did you know you could even do that in JavaScript? Well, the truth is:
+
+>JavaScript doesn't support classes — at least not in the classical Java language sense. Because JavaScript is a prototype-based language, you don't define classes: instead, behavior is reused via cloning existing objects. Thus, in JavaScript, you don't define class objects, you define them in functions, then use nested functions to define behavior — something you've already seen in action.
+> > from [Java development 2.0: JavaScript for Java developers](http://www.ibm.com/developerworks/java/library/j-javadev2-18/index.html)  by yours truly
+
+
+When you run it, what do you see? Now for the fun. 
+
+Take that file (let's say it's name is `lab4.coffee` (again)) and type:
+
+```
+$> coffee -c lab4.coffee
+```
+
+That `-c` flag compiles your `.coffee` file into a `.js` one. Open up the resultant `lab4.js`. Compare that with the CoffeeScript code. 
+
+_Which code would you rather write? Which code would you rather maintain?_
