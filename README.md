@@ -133,7 +133,7 @@ __Your mission__: Make the web app work with a list of words! Have a look in the
 
 ```
 <body>
-
+    <!-- what's that {word.id} doing there? -->
     <div data-role="page" id="page_{word.id}" data-theme='c'>
       <div data-theme="g" data-role="header">
         <h3>
