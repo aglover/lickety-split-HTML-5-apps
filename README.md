@@ -28,7 +28,7 @@ Go ahead and resize your browser window to make it more like a device (a phone o
 
 Now take a look at the source code. 
 
-##### divs and pages
+##### `div`s and pages
 
 In jQuery Mobile, a web page is delineated by a special `div`. In fact, it's defined by a `div` with a special attribute dubbed `data-role` with a value of `page`. For example, the definition for the page you see above is defined as:
 
@@ -64,13 +64,13 @@ Now look at the sub-`div`s of this page -- they also contain `data-role`s, and t
 
 __Question__: How would you add another page to this app? Need a sample word? See [Merriam-Webster's Word of the Day](http://www.merriam-webster.com/word-of-the-day/).
 
-##### colors
+##### Colors
 
 By default, jQuery Mobile allows you to easily change the color scheme of a web app. You can get rather fancy with jQuery's [ThemeRoller](http://jquerymobile.com/themeroller/index.php) or you can simply change the values of `data-theme` within the various `div`s associated with a page.
 
 __Question__: How would you change the colors of this app? Hint: the valid attribute values for `data-theme` are `a`, `b`, `c`, `d`, and `e`.
 
-##### themes
+##### Themes
 
 Now check out [jQuery Mobile Flat-UI Theme](https://github.com/ququplay/jquery-mobile-flat-ui-theme). 
 
