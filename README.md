@@ -34,6 +34,8 @@ In [Lab #3](/labs/lab3/README.md), you'll get started with Node.js!
 #### Lab #4
 
 
+>CoffeeScript is a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart. CoffeeScript is an attempt to expose the good parts of JavaScript in a simple way.
+
 #### Lab #5
 
 
