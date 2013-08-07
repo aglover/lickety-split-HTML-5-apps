@@ -101,6 +101,8 @@ While navigation via buttons works and it's the traditional way of doing things 
 
 Of course, the answer is "Yes! You can use gestures!" 
 
+##### Gestures
+
 jQuery Mobile, being a mobile first framework, supports the usage of gestures -- all you have to do is plug 'em in. Open up the `index.html` file with your favorite editor and remove the old, pedestrian button logic and replace it with this logic:
 
 ```
@@ -135,6 +137,14 @@ If you have Chrome, open up the JavaScript Console and then click the button rig
 
 ![emulate touch](/docs/imgs/touch_events.png)
 
+Also note the JavaScript code from earlier -- there are calls to `console.log`. You can see that output in the JavaScript Console.
+
+##### Custom icons
+
+Take a look in the `images` directory. There are two icons in there: `42-info.png` & `258-checkmark.png`. Double-click them to view them -- aren't they nice? They sure beat the default icons available to you in jQuery. You did study the code in lab #1 and notice that the footer had some icons, right?
+
+Let's reduce the footer to have only 2 navigation options and let's use custom icons. Copy the CSS code below into a `style` block in the `index.html` file:
+
 ```
 div[data-role='navbar'] .ui-btn .ui-btn-inner { 
   padding-top: 50px; 
@@ -150,6 +160,12 @@ div[data-role='navbar'] .ui-btn .ui-icon {
 #quiz .ui-icon { 
   background:  url(/img/258-checkmark.png) 50% 50% no-repeat; 
 }
+```
+
+Then, change the footer to make use of these icons! Hint: you'll need to replace the current `li`'s with something like this: 
+
+```
+<li><a href='#' data-icon='custom' id='csinfo'>Help</a></li>
 ```
 
 #### Lab #3
