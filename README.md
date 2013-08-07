@@ -113,13 +113,27 @@ What's more,
 >Among open source, document-oriented databases, MongoDB is often billed as a NoSQL database with RDBMS features. One example of this is MongoDB's support for dynamic queries that don't require predefined MapReduce functions. MongoDB also comes with an interactive shell that makes accessing its datastore refreshingly easy, and its out-of-the-box support for sharding enables high scalability across multiple nodes.
 >> From [Java development 2.0: MongoDB: A NoSQL datastore with (all the right) RDBMS moves](http://www.ibm.com/developerworks/library/j-javadev2-12/) by yours truly
 
-Back to the code in `Datastore.coffee`....`mongoskin` is the library being used to communicate with MongoDB. The `db.bind` method creates a function dubbed `recentlyCreated` that finds the 10 most recently created  documents in the `words` collection (aka table). This function will show up in a few more minutes. 
+Back to the code in `Datastore.coffee`....`mongoskin` is the library being used to communicate with MongoDB. The `db.bind` method creates a function dubbed `recentlyCreated` that finds the 10 most recently created  documents in the `words` collection (a.k.a. _table_). This function will show up in a few more minutes. 
 
+Now go into the `routes` directory inside the `app` directory and open up the `Index.coffee` file. This code defines what should happen when the root URL is hit (i.e. `/`). Note the line `db.words.recentlyCreated` -- there's that call to MongoDB.
 
+Look a little lower and you'll see `allWords.push new WordModel.Word...` -- where `allWords` is an Array and new `WordModel`s are bing added to it. Where is `WordModel` defined, you ask? 
+
+Open up the file `Word.coffee` in the `app/models` directory. There's one of those CoffeeScript classes you saw in an earlier lab!
+
+Putting it all together, the `Index.coffee` code gets the 10 most recent word documents from MongoDB and creates a `WordModel` for each one (and note how those functions from `Bootstrap` are being used: `capitalize` & `periodize`). 
+
+Are things coming together for you, yet?
+
+Now on to the lesson at hand here: look closely at `Index.coffee` again -- you see this line: `res.render 'index', {words: allWords}`? That line results in the rending of a web page (the one you've seen now multiple times). And look what variable is passed to that rending process: `words` and what is `words`? Yes! It's an Array of ten `WordModel`s. 
+
+So why then does the resultant web page _not_ display more than one word?
+
+__Your mission__: Make the web app work with a list of words! Have a look in the `views` directory and open up the `Index.html` file. What do you see? 
 
 ```
 <body>
-  {for word in words}
+
     <div data-role="page" id="page_{word.id}" data-theme='c'>
       <div data-theme="g" data-role="header">
         <h3>
@@ -129,9 +143,9 @@ Back to the code in `Datastore.coffee`....`mongoskin` is the library being used 
       
       <div data-role="content"> 
         <div class="center-wrapper">
-           <h2>{word.spelling} </h2>
-           <p><em>{word.partOfSpeech}</em> - {word.definition}</p>
-           <p>"{word.exampleSentence}"</p>
+           <h2>Raucous</h2>
+           <p><em>Noun</em> - Boisterously disorderly</p>
+           <p>"The partying neighbors kept up their raucous laughter half the night."</p>
          </div>
       </div>
 
@@ -144,9 +158,10 @@ Back to the code in `Datastore.coffee`....`mongoskin` is the library being used 
         </div>
       </div>
     </div>
-  {/for}
 </body>
 ```
+
+How can you make that dynamic? How can you use Whiskers (hint: Whiskers uses _single_ braces: `{}`) to render a list of 10 objects? Another hint: Whiskers uses `{for in object}` for looping. You finish a loop with a `{/for}` tag. And the `WordModel` object has a number of properties you can access: `id`, `spelling`, `definition`, `partOfSpeech`, and `exampleSentence`.
 
 
 
