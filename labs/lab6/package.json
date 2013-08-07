@@ -1,0 +1,18 @@
+{
+	"name" : "my-app",
+	"version" : "0.0.1",
+	"dependencies":{
+		"express" : "latest",
+		"whiskers" : "latest",
+		"coffee-script" : "latest",
+		"mongoskin":"latest",		
+		"bower":"latest"
+	},
+	"scripts": {
+       "postinstall": "./node_modules/bower/bin/bower install"
+    },
+	"engines" : {
+		"node" : "0.8.22",
+		"npm" : "1.2.x"
+	}
+}

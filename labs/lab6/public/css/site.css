@@ -1,0 +1,17 @@
+.center-wrapper {
+  text-align: center;
+}
+div[data-role='navbar'] .ui-btn .ui-btn-inner { 
+  padding-top: 50px; 
+}
+div[data-role='navbar'] .ui-btn .ui-icon { 
+  width: 40px; 
+  height: 40px; 
+  margin-left: -20px; 
+}
+#csinfo .ui-icon { 
+  background:  url(/img/42-info.png) 50% 50% no-repeat; 
+}
+#quiz .ui-icon { 
+  background:  url(/img/258-checkmark.png) 50% 50% no-repeat; 
+}
