@@ -30,13 +30,25 @@ In [Lab #2](/labs/lab2/README.md), you'll implement gestures and add custom icon
 
 In [Lab #3](/labs/lab3/README.md), you'll get started with Node.js!
 
-
 #### Lab #4
 
 In [Lab #4](/labs/lab4/README.md), your inner perfectionist is awakened with [CoffeeScript](http://coffeescript.org/).
 
 #### Lab #5
 
+In this lab, you're going to get more familiar with a typical Node app. Like the other labs, this code base produces the same Overheard Word app, however, in this case, the code is organized more appropriately. 
+
+##### Set up
+
+Just like for the other labs, you'll need to run (in the `lab5` directory):
+
+```
+$> npm install
+```
+
+Open up your browser and go to [localhost:5000/](http://localhost:5000/) and once again, you should see:
+
+![same old same old](/docs/imgs/lab3.png)
 
 #### Lab #6
 
