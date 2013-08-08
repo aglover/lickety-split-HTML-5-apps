@@ -1,4 +1,4 @@
-# Lickety-split HTML 5 apps with jQuery Mobile and Node.js
+# Lickety-split HTML5 apps with jQuery Mobile and Node.js
 
 
 Building mobile web apps is surprisingly easy with [jQuery Mobile](http://jquerymobile.com/). Combine jQuery Mobile's simplicity with [Node's rapid development platform](http://nodejs.org/) and you have yourself a recipe for immediate satisfaction. 
